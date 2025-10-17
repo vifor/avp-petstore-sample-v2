@@ -1,7 +1,13 @@
 import './App.css';
 import { Tabs, Text, Card, ThemeProvider, Flex, Authenticator, View } from '@aws-amplify/ui-react';
-import { Franchises, Stores, Products } from './pages';
+// REMOVED: import { Franchises, Stores, Products } from './pages';
 import '@aws-amplify/ui-react/styles.css';
+
+// ADDED: Define placeholder components because they don't exist in the source code.
+const Placeholder = ({ name }) => <Card><Text>{name} content will be displayed here.</Text></Card>;
+const Franchises = () => <Placeholder name="Franchises" />;
+const Stores = () => <Placeholder name="Stores" />;
+const Products = () => <Placeholder name="Products" />;
 
 function App() {
   return (
